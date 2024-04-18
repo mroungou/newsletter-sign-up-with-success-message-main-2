@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:wght@400;700&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+.ad {
+  padding: 0 1.5rem;
+}
+.ad * {
+  margin: 0;
+  color: hsl(234, 29%, 20%);
+}
+.ad h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  padding: 1.5rem 0;
+}
+.ad p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+}
+.ad .points {
+  padding: 2rem 0rem 1rem;
+  line-height: 150%;
+}
+.ad .point {
+  display: grid;
+  grid-template-columns: 22px auto;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+  padding: 0 0 1rem;
+}
+
+.form label {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.form input {
+  margin-top: 0.5rem;
+  display: block;
+  padding: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border-color: rgba(25, 24, 43, 0.25);
+  border-radius: 10px;
+}
+.form .submit-button {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1.25rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+.form .small-text {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+.form .small-text .error {
+  margin-left: auto;
+}
+
+.success-message {
+  padding: 0 1.5rem;
+  display: none;
+}
+.success-message .message h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.success-message .message .email-confirmation {
+  font-weight: 700;
+}
+.success-message .message .dismiss-button {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+  padding: 1.25rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-color: rgb(54, 56, 77);
+  }
+  main {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    padding: 1.5rem;
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .header-main {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .header-main .header-image {
+    grid-column-start: 2;
+  }
+  .header-main .ad {
+    grid-area: 1;
+    margin: auto 0;
+    padding: 0 3.5rem;
+  }
+  .header-main .ad h1 {
+    font-size: 3.5rem;
+  }
+  .header-main .ad p {
+    width: 85%;
+  }
+  .form input:hover, .form input:focus {
+    cursor: pointer;
+    border-color: hsl(234, 29%, 20%);
+  }
+  .form .submit-button:hover {
+    cursor: pointer;
+    background: linear-gradient(rgb(255, 106, 58), rgb(255, 82, 123));
+    box-shadow: 2px 2px 50px hsl(4, 100%, 67%);
+  }
+  .success-message {
+    width: 28%;
+    border-radius: 20px;
+    padding: 1.75rem;
+    background-color: hsl(0, 0%, 100%);
+  }
+  .success-message .message h2 {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+  }
+  .success-message .dismiss-button {
+    margin-top: 2rem;
+  }
+  .success-message .dismiss-button:hover {
+    cursor: pointer;
+    background: linear-gradient(rgb(255, 106, 58), rgb(255, 82, 123));
+    box-shadow: 2px 2px 50px hsl(4, 100%, 67%);
+  }
+}
+.has-error input {
+  border-color: hsl(4, 100%, 67%);
+  background-color: rgba(255, 97, 85, 0.15);
+  color: hsl(4, 100%, 67%);
+}
+.has-error .error {
+  color: hsl(4, 100%, 67%);
+  font-size: 0.75rem;
+  font-weight: 700;
+}/*# sourceMappingURL=main.css.map */

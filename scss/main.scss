@@ -1,0 +1,209 @@
+@use 'colors';
+@use 'fonts';
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile {
+    display: block;
+}
+
+.desktop {
+    display: none;
+}
+
+
+.ad {
+    * {
+        margin: 0;
+        color: colors.$darkSlateGrey;
+    }
+    padding: 0 1.5rem;
+
+    h1 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        padding: 1.5rem 0;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 150%;
+    }
+
+    .points {
+        padding: 2rem 0rem 1rem;
+        line-height: 150%;
+    }
+
+    .point {
+        display: grid;
+        grid-template-columns: 22px auto;
+        column-gap: .75rem;
+        padding: 0 0 1rem;
+    }
+}
+
+.form {
+    label {
+        font-size: .75rem;
+        font-weight: 700;
+    }
+    input {
+        margin-top: .5rem;
+        display: block;
+        padding: 1.25rem;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 1rem;
+        border-color: rgba(25, 24, 43, 0.25);
+        border-radius: 10px;
+    }
+
+    .submit-button {
+        color: colors.$white;
+        background-color: colors.$darkSlateGrey;
+        font-weight: 700;
+        font-size: 1rem;
+        text-align: center;
+        padding: 1.25rem;
+        border-radius: 10px;
+        margin-top: 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: none;
+    }
+
+    .small-text {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        .error {
+            margin-left: auto;
+        }
+    }
+
+}
+
+.success-message {
+    padding: 0 1.5rem;
+    display: none;
+    .message {
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .email-confirmation {
+            font-weight: 700;
+        }
+
+        .dismiss-button {
+            color: colors.$white;
+            background-color: colors.$darkSlateGrey;
+            padding: 1.25rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    body {
+        background-color: rgba(54, 56, 77, 1);
+    }
+
+    main {
+        background-color: colors.$white;
+        border-radius: 15px;
+        padding: 1.5rem;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+    .header-main {
+        display: grid;
+        grid-template-columns:repeat(2, auto);
+        .header-image {
+            grid-column-start: 2;
+        }
+        .ad {
+            grid-area: 1;
+            margin: auto 0;
+            padding: 0 3.5rem;
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                width: 85%;
+            }
+        }
+
+    }
+
+    .form {
+        input:hover, input:focus {
+            cursor: pointer;
+            border-color: colors.$darkSlateGrey;
+        }
+
+        .submit-button:hover {
+            cursor: pointer;
+            background: linear-gradient(rgba(255, 106, 58, 1),rgba(255, 82, 123, 1));
+            box-shadow: 2px 2px 50px colors.$tomato;
+        }
+    }
+
+    .success-message {
+        width: 28%;
+        border-radius: 20px;
+        padding: 1.75rem;
+        background-color: colors.$white;
+        .message {
+            h2 {
+                font-size: 3.5rem;
+                margin: 1rem 0;
+            }
+        }
+
+        .dismiss-button {
+            margin-top: 2rem;
+        }
+
+        .dismiss-button:hover {
+            cursor: pointer;
+            background: linear-gradient(rgba(255, 106, 58, 1),rgba(255, 82, 123, 1));
+            box-shadow: 2px 2px 50px colors.$tomato;
+        }
+    }
+}
+
+.has-error {
+    input {
+        border-color: colors.$tomato;
+        background-color: colors.$errorBackGroundHighlight;
+        color: colors.$tomato;
+    }
+
+    .error {
+        color: colors.$tomato;
+        font-size: .75rem;
+        font-weight: 700;
+    }
+}
